@@ -11,9 +11,10 @@ def get_ai_response(url):
 
  
     # getting the name of the company
-    company = new_r.html.xpath('/html/body/div/main/section/div[2]',first = True)  #type: ignore
+    company = new_r.html.xpath('/html/body/div/main/section/div[1]/div[3]',first = True)  #type: ignore
     response  = company.text
-    print(response)
     new_session.close()
     
-    return response [436:]
+    return response 
+
+#if __name__ == '__main__':    print(get_ai_response("Gwalior"))
